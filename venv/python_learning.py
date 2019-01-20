@@ -29,3 +29,26 @@ def find_uniq(arr):
         return min(arr)
     else:
         return max(arr)
+
+
+# solution
+def solution(number):
+    total_sum = 0
+    for i in range(1, number):
+        if (i % 3 == 0 or i % 5 == 0):
+            total_sum = total_sum + i
+    return total_sum
+
+# solution
+def solution(s):
+  if len(s) % 2 != 0:
+      s = s + "_"
+  return [s[i:i+2] for i in range(0,len(s),2)]
+
+
+# is pangram 
+import string
+
+def is_pangram(s):
+    alphabet = set(string.ascii_lowercase)
+    return (set(s.lower()) >= alphabet)
