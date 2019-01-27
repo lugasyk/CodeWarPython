@@ -46,9 +46,22 @@ def solution(s):
   return [s[i:i+2] for i in range(0,len(s),2)]
 
 
-# is pangram 
+# is pangram
 import string
 
 def is_pangram(s):
     alphabet = set(string.ascii_lowercase)
     return (set(s.lower()) >= alphabet)
+
+
+# in_array
+def in_array(array1, array2):
+    return sorted(set(filter(lambda e1: any(e1 in e2 for e2 in array2),array1)))
+
+# is_prime
+from math import sqrt; from itertools import count, islice
+
+def is_prime(n):
+    return n > 1 and all(n%i for i in islice(count(2), int(sqrt(n)-1)))
+
+#
