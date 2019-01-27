@@ -18,7 +18,7 @@ def solution(roman):
         sum += rules[n] * sign
 
     return sum
-    print sum
+
 
 if __name__ == "__main__":
     solution("MCMXC")
