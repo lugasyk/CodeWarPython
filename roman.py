@@ -21,4 +21,4 @@ def solution(roman):
 
 
 if __name__ == "__main__":
-    solution("MCMXC")
+    print(solution("MCMXC"))
